@@ -15,6 +15,6 @@ import yaml
 
 with open(yml_file, 'r') as file:
     os_list = yaml.load(file, Loader=yaml.FullLoader)
-    jsonFIle = yml_file.replace('.yml', '').replace('.yaml', '') + '.json'
+    jsonFIle = yml_file.replace('.yml', '.json').replace('.yaml', '.json')
     with open(jsonFIle, 'w') as outfile:
         json.dump(os_list, outfile, indent=2)
